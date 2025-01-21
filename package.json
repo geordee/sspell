@@ -1,0 +1,21 @@
+{
+  "name": "sshots",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "spellcheck": "node index.js"
+  },
+  "keywords": [],
+  "author": "Geordee Naliyath George",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.7",
+    "csv-parse": "^5.6.0"
+  },
+  "dependencies": {
+    "spellchecker": "^3.7.1"
+  }
+}

@@ -1,0 +1,4 @@
+node_modules/
+urls.csv
+urls.*.csv
+!urls.example.csv
