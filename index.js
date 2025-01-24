@@ -107,7 +107,7 @@ async function main() {
         if (!uniqueMisspellings.has(word)) {
           uniqueMisspellings.set(word, new Map());
         }
-        uniqueMisspellings.get(word).set(result.pageTitle, contexts);
+        uniqueMisspellings.get(word).set(result.url, contexts);
       });
     });
 
@@ -116,7 +116,7 @@ async function main() {
         if (!uniqueMisspellings.has(word)) {
           uniqueMisspellings.set(word, new Map());
         }
-        uniqueMisspellings.get(word).set(result.pageTitle, contexts);
+        uniqueMisspellings.get(word).set(result.url, contexts);
       });
     });
 
@@ -133,8 +133,8 @@ async function main() {
 
     sortedMisspellings.forEach(([word, pages]) => {
       console.log(`\n"${word}" (found on ${pages.size} pages):`);
-      pages.forEach((contexts, pageTitle) => {
-        console.log(`  ${pageTitle}:`);
+      pages.forEach((contexts, url) => {
+        console.log(`  ${url}:`);
         contexts.forEach(context => {
           const highlighted = context.replace(
             new RegExp(word, 'g'),
